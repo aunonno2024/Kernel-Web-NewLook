@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <title>The Linux Kernel Archives</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./icons/logo-small.png"/>
+    <link rel="stylesheet" type="text/css" href="./src/stylesheets/Releases.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="ball-1"></div>
+        <div class="ball-2"></div>
+        <div class="ball-3"></div>
+
+        <div class="box">
+            <div class="header">
+                <div class="title">
+                    <span class="text">The Linux Kernel Archives</span>
+                </div>
+                <nav>
+                    <ul class="navbar">
+                        <li><a href="./Home.html">Home</a></li>
+                        <li><a href="./Releases.html">Releases</a></li>
+                        <li><a href="./FAQ.html">FAQ</a></li>
+                        <li><a href="./About.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="chapter-1">
+                <h1>Active Kernel Releases</h1>
+                <h3>There are several main categories into which kernel releases may fall:</h3>
+                <h3>Prepatch</h3>
+                <p>Prepatch or "RC" kernels are mainline kernel pre-releases that are mostly aimed at other kernel developers and Linux enthusiasts. They must be compiled from source and usually contain new features that must be tested before they can be put into a stable release. Prepatch kernels are maintained and released by Linus Torvalds.</p>
+                <h3>Mainline</h3>
+                <p>Mainline tree is maintained by Linus Torvalds. It's the tree where all new features are introduced and where all the exciting new development happens. New mainline kernels are released every 9-10 weeks.</p>
+                <h3>Stable</h3>
+                <p>After each mainline kernel is released, it is considered "stable." Any bug fixes for a stable kernel are backported from the mainline tree and applied by a designated stable kernel maintainer. There are usually only a few bugfix kernel releases until the next mainline kernel becomes available -- unless it is designated a "longterm maintenance kernel." Stable kernel updates are released on an as-needed basis, usually once a week.</p>
+                <h3>long-term</h3>
+                <p>There are usually several "long-term maintenance" kernel releases provided for the purposes of backporting bugfixes for older kernel trees. Only important bugfixes are applied to such kernels and they don't usually see very frequent releases, especially for older trees.</p>
+                <h3>Long-term Release Kernels</h3>
+                <table>
+                    <tr>
+                        <th>Version</th>
+                        <th>Maintainer</th>
+                        <th>Released</th>
+                        <th>Projected EOL</th>
+                    </tr>
+                    <tr>
+                        <td>6.6</td>
+                        <td>Greg Kroah-Hartman & Sasha Levin</td>
+                        <td>2023-10-29</td>
+                        <td>Dec, 2026</td>
+                    </tr>
+                    <tr>
+                        <td>6.1</td>
+                        <td>Greg Kroah-Hartman & Sasha Levin</td>
+                        <td>2022-12-11</td>
+                        <td>Dec, 2026</td>
+                    </tr>
+                    <tr>
+                        <td>5.15</td>
+                        <td>Greg Kroah-Hartman & Sasha Levin</td>
+                        <td>2021-10-31</td>
+                        <td>Dec, 2026</td>
+                    </tr>
+                    <tr>
+                        <td>5.10</td>
+                        <td>Greg Kroah-Hartman & Sasha Levin</td>
+                        <td>2020-12-13</td>
+                        <td>Dec, 2026</td>
+                    </tr>
+                    <tr>
+                        <td>5.4</td>
+                        <td>Greg Kroah -Hartman & Sasha Levin</td>
+                        <td>2019-11-24</td>
+                        <td>Dec, 2026</td>
+                    </tr>
+                    <tr>
+                        <td>4.19</td>
+                        <td>Greg Kroah-Hartman & Sasha Levin</td>
+                        <td>2018-10-22</td>
+                        <td>Dec, 2026</td>
+                    </tr>
+                    <tr>
+                        <td>4.14</td>
+                        <td>Greg Kroah-Hartman & Sasha Levin</td>
+                        <td>2017-11-12</td>
+                        <td>Dec, 2026</td>
+                    </tr>
+                    <tr>
+                        <td>4.9</td>
+                        <td>Greg Kroah-Hartman & Sasha Levin</td>
+                        <td>2016-12-11</td>
+                        <td>Dec, 2026</td>
+                    </tr>
+                    <tr>
+                        <td>4.4</td>
+                        <td>Greg Kroah-Hartman & Sasha Levin</td>
+                        <td>2016-01-10</td>
+                        <td>Dec, 2026</td>
+                    </tr>
+                </table>
+                  <h3>Releases FAQ</h3>
+                    <p>Here are some questions we routinely receive about kernel release versions. See also the main "FAQ" section for some other topics.</p>
+                  <h4>When is the mainline kernel version going to be released?</h4>
+                    <p>Linux kernel follows a simple release cadence:</p>
+                <li>
+                    <p>After each mainline release, there is a 2-week "merge window" period during which new major features are introduced into the kernel.</p>
+                    <p>After the merge window closes, there is a 7-week bugfix and stabilization period with weekly "release candidate" snapshots.</p>
+                    <p>Rc7 is usually the last release candidate, though occasionally there may be additional rc8+ releases if that is deemed necessary.</p>
+                </li>
+                    <p>So, to find the approximate date of the next mainline kernel release, take the date of the previous mainline release and add 9-10 weeks.</p>
+                  <h4>What is the next long-term release going to be?</h4>
+                    <p>Long-term kernels are picked based on various factors -- major new features, popular commercial distribution needs, device manufacturer demand, maintainer workload and availability, etc. You can roughly estimate when the new longterm version will become available based on how much time has elapsed since the last long-term version was chosen.</p>
+                  <h4>Why are some long-term versions supported longer than others?</h4>
+                    <p>The "projected EOL" dates are not set in stone. Each new long-term kernel usually starts with only a 2-year projected EOL that can be extended further if there is enough interest from the industry at large to help support it for a longer period of time.</p>
+                  <h4>Does the major version number (4.x vs 5.x) mean anything?</h4>
+                    <p>No. The major version number is incremented when the number after the dot starts looking "too big." There is literally no other reason.</p>
+                  <h4>Does the odd-even number still mean anything?</h4>
+                    <p>A long time ago Linux used a system where odd numbers after the first dot indicated pre-release, development kernels (e.g. 2.1, 2.3, 2.5). This scheme was abandoned after the release of kernel 2.6 and these days pre-release kernels are indicated with "-rc".</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

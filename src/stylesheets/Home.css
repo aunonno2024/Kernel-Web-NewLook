@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #FFF;
+    list-style: none;
+    font-family: sans-serif;
+ }
+
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: rgb(5, 5, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container::before {
+    content: '';
+    position: absolute;
+    height: 330px;
+    width: 330px;
+    border-radius: 50%;
+    background: linear-gradient(#eb3c06, #0d99c4);
+    transform: translate(-490px, -150px);
+}
+
+
+.container::after {
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: linear-gradient(#1202f3, #c900f1);
+    transform: translate(490px,170px);
+}
+
+
+.container .ball-1 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #eb3c06;
+    transform: translate(-250px,200px);
+    position: absolute;
+}
+
+
+.container .ball-2 {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #1202f3;
+    transform: translate(-10px,-220px);
+    position: absolute;
+}
+
+
+.container .ball-3 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #0d99c4;
+    transform: translate(150px,250px);
+    position: absolute;
+}
+
+
+.container .box {
+    height: 86vh;
+    width: 75%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 10;
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    border: 2px solid rgba(0, 255, 255);
+    backdrop-filter: blur(25px);
+    box-shadow: -15px 17px 17px rgba(10,10,10,0.25);
+}
+
+
+.container .header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.title {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+
+.container .title .text{
+    color: rgba(255, 255, 0, 1);
+    font-size: medium;
+    font-weight: bold;
+}
+
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 0;
+    background: #f03304;
+    z-index: -1;
+    box-shadow: 0 0 10px #dc2f02,
+                0 0 20px #dc2f02,
+                0 0 40px #dc2f02,
+                0 0 80px #dc2f02,
+                0 0 100px #dc2f02;
+    transition: 0.25s;
+}
+
+
+ul li a:hover::before{
+    width: 100%;
+}
+
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 0 5px;
+    padding: 10px 20px;
+    position: relative;
+}
+
+
+ul li {
+    display: inline-block;
+    margin: 10px 0;
+
+
+}
+
+
+.container .box .contains {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+    position: relative;
+    margin-top: 8%;
+    padding-right: 1000px;
+}
+
+
+.container .box .contains .section-1 h1 {
+    font-size: 75px;
+    color: #df3627;
+}
+
+
+.container .box .contains .section-1 h3 {
+    font-size: 36px;
+    color: #7fcf74;
+    white-space: nowrap;
+     
+}
+
+
+.container .box .contains .section-1 p {
+    margin-top: 50px;
+    color: #f55e06;
+     
+}
+
+
+.container .box .contains .section-1 .button {
+    margin-top: 50px;
+}
+
+
+.container .box .contains .section-1 .button a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s color 0.3s;
+}
+
+
+.container .box .contains .section-1 .button a.unstable {
+    background-color: rgb(187, 33, 33);
+
+
+}
+
+
+.container .box .contains .section-1 .button a.unstable:hover {
+    background-color: darkred;
+
+
+}
+
+
+.container .box .contains .section-1 .button a.stable {
+    background-color: rgb(62, 189, 62);
+
+
+}
+
+
+.container .box .contains .section-1 .button a.stable:hover {
+    background-color: darkgreen;
+
+
+}
+
+
+.container .box .contains .section-1 .button a.lts {
+    background-color: rgb(201, 102, 44);
+
+
+}
+
+
+.container .box .contains .section-1 .button a.lts:hover {
+    background-color: rgb(255, 60, 0);
+
+
+}
+
+
+span {
+    color: red;
+    font-size: 40px;
+}

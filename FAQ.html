@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Linux kernel Archives</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./icons/logo-small.png"/>
+    <link rel="stylesheet" type="text/css" href="./src/stylesheets/FAQ.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="ball-1"></div>
+        <div class="ball-2"></div>
+        <div class="ball-3"></div>
+
+        <div class="box">
+            <div class="header">
+                <div class="title">
+                    <span class="text">The Linux Kernel Archives</span>
+                </div>
+                <nav>
+                    <ul class="navbar">
+                        <li><a href="./Home.html">Home</a></li>
+                        <li><a href="./Releases.html">Releases</a></li>
+                        <li><a href="./FAQ.html">FAQ</a></li>
+                        <li><a href="./About.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="chapter-2">
+                <h1>Frequently asked questions</h1>
+                   <p>If you have questions, comments or concerns about the F.A.Q. please contact us at <a class="reference external" href="milto:helpdesk@kernel.org">helpdesk@kernel.org</a></p>
+                <h3>Is Linux kernel Free Software?</h3>
+                   <p>Linux kernel is released under the terms of GNU GPL version 2 and is therefore Free Software as defined by the <a class="reference external" href="https://www.fsf.org/">Free Software Foundation.</a></p>
+                <h4>For more information, please consult the documentation:</h4>
+
+                    <a class="reference" href="https://docs.kernel.org/process/license-rules.html">Linux kernel licensing rules</a>
+
+                <h3>I heard that Linux ships with non-free "blobs"</h3>
+                    <p>Before many devices are able to communicate with the OS, they must first be initialized with the "firmware" provided by the device manufacturer. This firmware is not part of Linux and isn't "executed" by the kernel -- it is merely uploaded to the device during the driver initialization stage.</p>
+                    <p>While some firmware images are built from free software, a large subset of it is only available for redistribution in binary-only form. To avoid any licensing confusion, firmware blobs were moved from the main Linux tree into a separate repository called <a class="reference" href="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git">linux-firmware</a></p>
+                    <p>It is possible to use Linux without any non-free firmware binaries, but usually at the cost of rendering a lot of hardware inoperable. Furthermore, many devices that do not require a firmware blob during driver initialization simply already come with non-free firmware preinstalled on them. If your goal is to run a 100% free-as-in-freedom setup, you will often need to go a lot further than just avoiding loadable binary-only firmware blobs.</p>
+
+                <h3>Can I use the word "Linux" or the Tux logo?</h3>
+                <h4>Linux is a registered trademark of Linus Torvalds and its use is governed by the Linux Trademark Institute. Please consult the following page for further information:</h4>
+
+                    <a class="reference" href="https://www.linuxfoundation.org/trademark-usage/">trademark-usage</a>
+
+                    <p>The Tux penguin logo was created by Larry Ewing using Gimp software. It is free to use, including commercially, as long as you give Larry Ewing proper credit ("if someone asks"). For any other permissions, please reach out to Mr. Larry Ewing directly.</p>
+
+                <h3>What does "stable/EOL" and "long-term" mean?</h3>
+                <h4>As kernels move from the "mainline" into the "stable" category, two things can happen:</h4>
+
+                    <p>1.They can reach "Eng of Life" after a few bugfix revisions, which means that kernel maintainers wll release no more bugfixes for this kernel version, or</p>
+                    <p>2.They can be put into "long-term" maintenance, which means that maintainers will provide bugfixes for this kernel revision for a much longer period of time.</p>
+                
+                    <p>If the kernel version you are using is marked "EOL," you should consider upgrading to the next major version as there will be no more bugfixes provided for the kernel version you are using.</p>
+                    <p>Please check the <a class="reference" href="./Releases.html">Releases</a>page for more info.</p>
+
+                <h3>Why is an LTS kernel marked as "stable" on the front page?</h3>
+                    <p>Long-term support ("LTS") kernels announced on the Releases page will be marked as "stable" on the front page if there are no other current stable kernel releases. This is done to avoid breaking automated parsers monitoring kernel.org with an expectation that there will always be a kernel release marked as "stable."</p>
+
+                <h3>Linus has tagged a new release, but it's not listed on the front page!</h3>
+                    <p>Linus Torvalds PGP-signs git repository tags for all new mainline kernel releases, however a separate set of PGP signatures needs to be generated by the stable release team in order to create downloadable tarballs. Due to timezone differences between Linus and the members of the stable team, there is usually a delay of several hours between when the new mainline release is tagged and when PGP-signed tarballs become available. The front page is updated once that process is completed.</p>
+
+                <h3>Is there an RSS feed for the latest kernel version?</h3>
+                    <p>Yes, and you can find it at <a class="reference" href="https://www.kernel.org/feeds/kdist.xml">http://www.kernel.org/feeds/kdist.xml</a></p>
+
+                    <p>We also publish a .json file with the latest release information, which you can pull from here:<a class="reference" href="http://www.kernel.org/release.json">http://www.kernel.org/relase.json.</a></p>
+                <h3>Where can I find kernel 3.10.0-1160.45.1.foo?</h3>
+
+                    <p>Kernel versions that have a dash in them are packaged by distributions and are often extensively modified. Please contact the relevant distribution to obtain the exact kernel source.</p>
+                    <p>See the <a class="reference" href="./Releases.html">page for more info on distribution kernels.</a></p>
+
+                <h3>How do I report a problem with the kernels?</h3>
+                    <p>If you are running a kernel that came with your Linux distribution, then the right place to start is by reporting the problem through your distribution support channels. Here are a few popular choices:</p>
+
+                <ol>
+                  <li><a class="Distros" href="https://help.ubuntu.com/stable/ubuntu-help/report-ubuntu-bug.html.en">Ubuntu</a></li>    
+                  <li><a class="Distros" href="https://docs.fedoraproject.org/en-US/quick-docs/bugzilla-file-a-bug/">Fedora Project</a></li>  
+                  <li><a class="Distros" href="https://bugs.archlinux.org/">Arch Linux</a></li>
+                  <li><a class="Distros" href="https://projects.linuxmint.com/reporting-an-issue.html">Linux Mint</a></li>      
+                  <li><a class="Distros" href="https://www.debian.org/Bugs/Reporting">Debian GNU/Linux</a></li>     
+                  <li><a class="Distros" href="https://bugzilla.redhat.com/">Red Hat</a></li>
+                  <li><a class="Distros" href="https://bugzilla.opensuse.org/">OpenSUSE</a></li>
+                  <li><a class="Distros" href="https://bugzilla.suse.com/">SUSE</a></li>       
+                </ol>
+
+                   <p>If you are sure that the problem is with the upstream kernel, please refer to the following document that describes how to report bugs and regressions to the developers:</p>
+                      <a class="reference" href="https://docs.kernel.org/admin-guide/reporting-issues.html">Reporting Issues</a>
+
+                <h3>How do I get involved with Linux Kernel development?</h3>
+                   <p>A good place to start is the<a class="reference" href="www.kernelnewbies.org">Kernel Newbies.</a></p>
+
+                <h3>Can I get an account on kernel.org?</h3>
+                <p>Kernel.org accounts are usually reserved for subsystem maintainers or high-profile developers. It is absolutely not necessary to have an account on kernel.org to contribute to the development of the Linux kernel, unless you submit pull requests directly to Linus Torvalds.</p>
+                <p>If you are listed in the MAINTAINERS file or have reasons to believe you should have an account on kernel.org because of the amount of your contributions, please refer to the accounts page for the procedure to follow.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
